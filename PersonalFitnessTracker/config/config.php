@@ -44,7 +44,7 @@ function redirect($url) {
 // Require login
 function requireLogin() {
     if (!isLoggedIn()) {
-        redirect('index.php');
+        redirect(BASE_URL . 'index.php');
     }
 }
 
@@ -52,7 +52,7 @@ function requireLogin() {
 function requireUserType($type) {
     requireLogin();
     if (getUserType() !== $type) {
-        redirect('index.php');
+        redirect(BASE_URL . 'index.php');
     }
 }
 ?>
